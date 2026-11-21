@@ -15,14 +15,12 @@ int main(){
     }
 }
 void selection(int arr[],int n){
-    int min,posi=-1;
+    int posi=-1;
     for(int i=0;i<n;i++){
         posi=i;
-        min=arr[i];
         for(int j=i+1;j<n;j++){
-            if(min>arr[j]) {
+            if(arr[posi]>arr[j]) {
                 posi=j;
-                min=arr[j];
             }
         }
         if(posi!=i){
