@@ -23,7 +23,7 @@ void count_sort(int nums[],int n){
         ++count[nums[i]];
     }
     for(int i=1;i<=maxi;i++) count[i]=count[i]+count[i-1];
-    for(int i=n-1;i>=0;i++){
+    for(int i=n-1;i>=0;i--){
         copy[--count[nums[i]]]=nums[i];
     }
     for(int i=0;i<n;i++){
